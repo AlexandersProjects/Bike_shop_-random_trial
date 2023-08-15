@@ -48,6 +48,44 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+
+    <!-- cal.com embed -->
+    <script>
+      (function (C, A, L) {
+        let p = function (a, ar) {
+          a.q.push(ar);
+        };
+        let d = C.document;
+        C.Cal =
+          C.Cal ||
+          function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              const api = function () {
+                p(api, arguments);
+              };
+              const namespace = ar[1];
+              api.q = api.q || [];
+              typeof namespace === "string"
+                ? (cal.ns[namespace] = api) && p(api, ar)
+                : p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+      })(window, "https://cal.com/embed.js", "init");
+      // Cal("init");
+      Cal("floatingButton", {
+        calLink: "alexcalendar"
+      });
+      </script>
   </head>
 
   <body>
@@ -60,17 +98,26 @@
               Fahrrad<span>Laden</span>
             </a>
             <div class="contact_nav">
-              <a href="">
+              <a href="#contact-section">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span> Standort </span>
               </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span> Anrufen : +49 123455678990 </span>
+              <a href="#appointment-section">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <span>Termin buchen</span>
               </a>
-              <a href="">
+              <a href="tel:+49123455678990">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>Anrufen</span>
+              </a>
+              <!-- WhatsApp chat -->
+              <a href="https://wa.me/123455678990">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <span>WhatsApp</span>
+              </a>  
+              <a href="mailto:fahrradladen@gmail.com?subject=Kontakt von Fahrradladen&body=Hallo Fahrradladen, ich wollte fragen ">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> fahrradladen@gmail.com </span>
+                <span>E-Mail</span>
               </a>
             </div>
             <div class="social_box">
@@ -125,6 +172,10 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#contact-section">Kontaktieren Sie uns</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#appointment-section">Termin buchen</a>
+                  </h1>
                   </li>
                   <form class="form-inline">
                     <button
@@ -398,6 +449,30 @@
 
     <!-- end service section -->
 
+    <!-- appointment section -->
+    <section id="appointment-section" class="contact_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Vereinbaren Sie einen <span>Termin</span> mit uns</h2>
+        </div>
+        <div id="my-cal-embed"></div>
+        <script>
+          Cal("inline", {
+            elementOrSelector: "#my-cal-embed", // You can also provide an element directly
+            calLink: "alexcalendar", // The link that you want to embed. It would open https://cal.com/jane in embed
+            config: {
+              name: "John Doe", // Prefill Name
+              email: "johndoe@gmail.com", // Prefill Email
+              notes: "Test Meeting", // Prefill Notes
+              guests: ["janedoe@gmail.com", "test@gmail.com"], // Prefill Guests
+              theme: "dark", // "dark" or "light" theme
+            },
+          });
+        </script>
+      </div>
+    </section>
+    <!-- end appointment section -->
+
     <!-- contact section -->
     <section id="contact-section" class="contact_section layout_padding">
       <div class="container">
@@ -639,7 +714,7 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <h5>Unsee Werkstatt</h5>
+                <h5>Unsere Werkstatt</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur
                   adipiscinaliquaLoreadipiscing

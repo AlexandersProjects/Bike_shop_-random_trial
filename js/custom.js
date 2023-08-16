@@ -7,8 +7,6 @@ function getYear() {
 
 getYear();
 
-
-
 // owl carousel slider js
 var owl = $('.portfolio_carousel').owlCarousel({
     loop: true,
@@ -39,7 +37,6 @@ var owl = $('.portfolio_carousel').owlCarousel({
 
 
 // owl.owlcarousel2_filter
-
 $('.owl-filter-bar').on('click', '.item', function (e) {
     var $items = $('.owl-filter-bar a')
     var $item = $(this);
@@ -50,6 +47,7 @@ $('.owl-filter-bar').on('click', '.item', function (e) {
 
     e.preventDefault();
 })
+
 /** google_map js **/
 function myMap() {
     var mapProp = {

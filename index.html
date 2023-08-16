@@ -17,8 +17,6 @@
     <title>Fahrrad Laden</title>
 
     <!-- bootstrap core css -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -35,13 +33,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
     <!-- nice select -->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
       integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4="
       crossorigin="anonymous"
-    /> -->
+    />
     <!-- font awesome style -->
+    <!-- maybe better?
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    -->
     <link href="css/font-awesome.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
@@ -86,6 +87,8 @@
         calLink: "alexcalendar"
       });
       </script>
+      <!-- Script for jquery - faq -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
   </head>
 
   <body>
@@ -653,6 +656,84 @@
     </section>
     <!-- end client section -->
 
+    <!-- faq section -->
+    <section id="faq-section" class="client_section layout_padding">
+      <div class="row">
+        <div class="container faq">
+          <div class="container">
+            <div class="heading_container heading_center">
+              <h2>Unsere häufig gefragten <span>Fragen - FAQ</span></h2>
+            </div>
+            <div class="col-sm-12 delete-margin">
+              <div class="accordions">
+                <div class="accordion-item">
+                  <div class="accordion-title" data-tab="item1">
+                    <h3>Why FutureRDP? <i class="fa fa-chevron-down"></i></h3>
+                  </div>
+                  <div class="accordion-content" id="item1">
+                    <p>
+                      FutureRDP provides cheap and affordable Linux and Windows VPS servers and
+                      storage solution since 2008 for more than 11 years in multiple locations such as
+                      the United States, UK, France, Germany, Netherlands, and Canada. We have a range
+                      of different solutions for different purposes such as SSD VPS and Storage
+                      servers. All servers are equipped with RAID10 only SSD drives and FREE DDoS
+                      Protection!
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <div class="accordion-title" data-tab="item2">
+                    <h3>What is Windows VPS? <i class="fa fa-chevron-down"></i></h3>
+                  </div>
+                  <div class="accordion-content" id="item2">
+                    <p>
+                      With a Windows VPS server, you will get a Remote Desktop connection within a few
+                      minutes. You can run Windows applications such as IIS, SQL, Microsoft Exchange
+                      or any software like Docking, Forex trading, Crypto Trading etc… or anything
+                      which you wish for. Just like your own computer!! but the difference is online
+                      24/7 days without interruptions and with a super fast Internet connection!
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <div class="accordion-title" data-tab="item3">
+                    <h3>Payment Options <i class="fa fa-chevron-down"></i></h3>
+                  </div>
+                  <div class="accordion-content" id="item3">
+                    <p>
+                      Unlike most other providers you don’t have to pay with just Credit Card or
+                      PayPal. You can also pay with Bitcoin, Alt Coins like Ethereum or Litecoin,
+                      PerfectMoney, Payza and of course you can still pay by PayPal and Credit Cards.
+                      You even get more discounts when you choose longer-term commitments like our
+                      attractive yearly plans.
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <div class="accordion-title" data-tab="item4">
+                    <h3>Free DDOS Protection <i class="fa fa-chevron-down"></i></h3>
+                  </div>
+                  <div class="accordion-content" id="item4">
+                    <p>
+                      Unlike other providers who charge extra for DDoS protection, All of our VPS
+                      servers comes with DDoS protection for FREE. This means you do not have to worry
+                      about your VPS performance at all. We are taking care of your needs while you do
+                      focus on your business!
+                    </p>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end faq section -->
+
     <!-- info section -->
 
     <section id="info-section" class="info_section">
@@ -778,37 +859,26 @@
     <!-- footer section -->
 
     <!-- jQery -->
-    <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+
     <!-- popper js -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    
     <!-- bootstrap js -->
-    <!-- <script src="js/bootstrap.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <!-- owl slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <!--  OwlCarousel 2 - Filter -->
     <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
+
     <!-- nice select -->
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
-      integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo="
-      crossorigin="anonymous"
-    ></script> -->
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
-      integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+
     <!-- custom js -->
     <script src="js/custom.js"></script>
+
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
     <!-- End Google Map -->
@@ -820,5 +890,35 @@
         $('.hero_area').css('background-image', 'url(' + newImage + ')');
       });
     </script>
+
+    <!-- script for - faq section -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".accordion-title").click(function (e) {
+          var accordionitem = $(this).attr("data-tab");
+          $("#" + accordionitem)
+            .slideToggle()
+            .parent()
+            .siblings()
+            .find(".accordion-content")
+            .slideUp();
+    
+          $(this).toggleClass("active-title");
+          $("#" + accordionitem)
+            .parent()
+            .siblings()
+            .find(".accordion-title")
+            .removeClass("active-title");
+    
+          $("i.fa-chevron-down", this).toggleClass("chevron-top");
+          $("#" + accordionitem)
+            .parent()
+            .siblings()
+            .find(".accordion-title i.fa-chevron-down")
+            .removeClass("chevron-top");
+        });
+      });
+      </script>
+    <!-- end script for - faq section -->
   </body>
 </html>
